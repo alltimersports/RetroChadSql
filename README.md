@@ -1,4 +1,4 @@
-RetroChadSql  Version 0.9.0  2014 February 25
+RetroChadSql : Version 0.9.0 : 2014 February 25
 
 RetroChadSql is a Python program that will use Chadwick to parse Retrosheet play-by-play and will then put that data into a relational database.
 
