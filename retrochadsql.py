@@ -361,7 +361,7 @@ class Table:
         if 'extended' in self._field_counts:
             command_parts.insert(2, 'extended')
         command = self._chadwick_command(command_parts, year)
-        header_info = subprocess.check_output(command, shell=True)[:-2]
+        header_info = subprocess.check_output(command, shell=True)[:-len(os.linesep)]
         self._field_names = [quoted[1:-1] for quoted in header_info.split(',')]
 
     def _set_column_types(self):
