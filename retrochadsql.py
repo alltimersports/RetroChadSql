@@ -79,7 +79,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."""
 
 VERSION = '0.9.0'
 
-AVAILABLE_YEARS = '1921 1922 1927 1931 1938-2012'
+AVAILABLE_YEARS = '1921 1922 1927 1931 1934-1935 1938-2013'
 """The years Retrosheet has play-by-play records available for
 downloading.
 
@@ -623,13 +623,9 @@ class Input(object):
         frame = ttk.LabelFrame(parent)
         label = ttk.Label(frame, wraplength=self._wrap_length, text=(
             'Choose the years to process.  For example, 1921 1940-1942 1969.  '
-            'The default shown is all the years* Retrosheet has as of '
+            'The default shown is all the years Retrosheet has as of '
             'December, 2013.  Also as of Fall 2013, only NL games are '
-            'included in 1921.\n'
-            '* 2013 is available, but is excluded by default because it has '
-            'an incompatability with Chadwick. Chadwick Baseball Bureau '
-            '(http://www.chadwick-bureau.com) maintains an alternate event '
-            'file download area that may have a compatible version.'))
+            'included in 1921.\n'))
         label.grid(padx=3)
         self._vars['years'] = tk.StringVar(value=self._constants['years'])
         entry = ttk.Entry(frame, textvariable=self._vars['years'])
@@ -996,7 +992,7 @@ class Input(object):
         vars_.update(self._ask_params(frame))
         self._vars['Load'] = vars_
         frame.columnconfigure(0, weight=1)
-        nb.add(frame, text='Database')
+        nb.add(frame, text='RDBMS')
         return frame
 
     def _show_license(self, nb):
