@@ -317,7 +317,7 @@ class Table:
         command_parts = {'program': '"{chad_path}cw{tool}"',
                          'switches': '-q -n -f 0-{standard_max} -y {year}',
                          'extended': '-x 0-{extended_max}',
-                         'arg': '{year}*.ev*',
+                         'arg': '{year}*.EV*',
                          'redirect': ' > "{csv_path}{year} {tool}.csv"',
                          'for_names': '-i 0',
                          'for_description': '-d'}
