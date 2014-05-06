@@ -79,7 +79,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."""
 
 VERSION = '0.9.0'
 
-AVAILABLE_YEARS = '1921 1922 1927 1931 1934-1935 1938-2013'
+#AVAILABLE_YEARS = '1921 1922 1927 1931 1934-1935 1938-2013'
+AVAILABLE_YEARS = '1921 1922 1927 1931 1938-1947 1948-2012'
 """The years Retrosheet has play-by-play records available for
 downloading.
 
@@ -623,8 +624,11 @@ class Input(object):
         frame = ttk.LabelFrame(parent)
         label = ttk.Label(frame, wraplength=self._wrap_length, text=(
             'Choose the years to process.  For example, 1921 1940-1942 1969.  '
-            'The default shown is all the years Retrosheet has as of '
-            'December, 2013.  Also as of Fall 2013, only NL games are '
+            'The default shown is all the years Retrosheet and Chadwick handle '
+            'properly as of May, 2014.  Retrosheet also has at least some '
+            ' play-by-play data for 1934, 1935, 1947, and 2013, but there are '
+            'errors and/or new codes that conflict with the current version '
+            'of Chadwick.  Also as of Spring, 2014, only NL games are '
             'included in 1921.\n'))
         label.grid(padx=3)
         self._vars['years'] = tk.StringVar(value=self._constants['years'])
