@@ -1,4 +1,4 @@
-RetroChadSql : Version 0.9.0 : 2014 February 25
+RetroChadSql : Version 0.9.1 : 2014 May 21
 
 RetroChadSql is a Python program that will use Chadwick to parse Retrosheet play-by-play and will then put that data into a relational database.
 
@@ -9,7 +9,7 @@ You can tell RetroChadSql to do all or only some of the tasks it can do. Those t
 --writing SQL files that fit the newest versions of Chadwick and the event files, even if they're newer than RetroChadSQL.
 --using the SQL files to load the data into a relational database
 
-In RetroChadSql version 0.9.0, MySQL (along with its mimic, MariaDb) is the only database supported. Without MySQL, you can still do every step except loading the data into the database. You can also edit the SQL files to be compatible with other database engines.
+In RetroChadSql version 0.9.1, MySQL (along with its mimic, MariaDb) is the only database supported. Without MySQL, you can still do every step except loading the data into the database. You can also edit the SQL files to be compatible with other database engines.
 
 Future versions of RetroChadSql will support PostgreSQL, SQLite, SQL Server, and generic ANSI-compliant SQL files that can be manually copied into databases that don't allow loading of files from the operating system command line, such as Access.
 
